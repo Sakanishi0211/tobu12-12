@@ -56,4 +56,5 @@ void set_duty_fr(float duty);
 void set_duty_fl(float duty);
 void set_duty_rr(float duty);
 void set_duty_rl(float duty);
+void set_servo(float duty);
 #endif

@@ -510,11 +510,12 @@ void MAINLOOP(void)
     //pwm_set_chan_level(slice_num[1], PWM_CHAN_A, Duty_rl);
     //pwm_set_chan_level(slice_num[1], PWM_CHAN_B, Duty_fl);
   }
-  if(Data9>0.0){ 
-    pwm_set_chan_level(3, PWM_CHAN_A, DUTYMIN);
+  if(Data9>0.0){
+    
+    set_servo(DUTYMIN);
   }
   else if(Data9<0.0){
-    pwm_set_chan_level(3, PWM_CHAN_A, 2100);
+    set_servo(2150);
   }
 
 #endif

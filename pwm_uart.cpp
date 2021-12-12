@@ -164,6 +164,15 @@ void set_duty_rl(float duty)
   pwm_set_chan_level(slice_num[1], PWM_CHAN_A, duty);
 }
 
+void set_servo(float duty)
+{
+  //duty=(float)(DUTYMAX-DUTYMIN)*duty+DUTYMIN;
+  //if (duty>DUTYMAX-50)duty=DUTYMAX-50;
+  //if (duty<DUTYMIN+15)duty=DUTYMIN+15;
+  pwm_set_chan_level(slice_num[2], PWM_CHAN_A, duty);
+}
+
+
 
 void on_uart_rx(void) {
   short data;
